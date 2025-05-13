@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IHM Hub | Outils</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <img src="images/logoblanc.png" alt="IHM Hub" class="logo large" />
+      <nav>
+        <div class="dropdown">
+          <button id="theme-toggle" class="dropdown-toggle">
+            Thèmes <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="theme-menu" class="dropdown-menu">
+            <a href="#">Découverte de l’UX/UI</a>
+            <a href="#">Méthodes de recherche</a>
+            <a href="#">Prototypage & wireframes</a>
+            <a href="#">Tests utilisateurs</a>
+            <a href="#">Accessibilité</a>
+          </div>
+        </div>
+        <a href="outils.html">Outils UX/UI</a>
+        <a href="communaute.html#section-communaute">Communauté</a>
+      </nav>
+    </div>
+    <div class="header-right">
+      <div class="search-bar">
+        <input type="text" placeholder="Que veux-tu apprendre ?" />
+        <button><i class="fa fa-search"></i></button>
+      </div>
+    
+      <!-- Boutons visiteur -->
+      <div id="guest-buttons" class="auth-buttons">
+        <button class="btn-connect" onclick="showHeaderLoginPopup()">Se connecter</button>
+        <button class="btn-register" onclick="showRegisterPopup()">S'inscrire</button>
+      </div>
+    
+     <!-- Affichage une fois connecté -->
+     <div id="header-user" class="header-user hidden">
+      <div id="profile-wrapper" class="profile-wrapper">
+        <div class="user-icon" id="profile-toggle">👤</div>
+        <div class="profile-dropdown hidden" id="profile-menu">
+          <div class="profile-name" id="dropdown-username">Prénom</div>
+          <ul>
+            <li><i class="fas fa-user"></i> Mon profil</li>
+            <li><i class="fas fa-chart-line"></i> Mon tableau de bord</li>
+            <li><i class="fas fa-tools"></i> Mes outils</li>
+            <li><i class="fas fa-book"></i> Mes ressources</li>
+            <li><i class="fas fa-calendar"></i> Mes événements</li>
+          </ul>
+          <div class="logout-btn" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Se déconnecter</div>
+        </div>
+      </div>
+    </div>   
+</header>
+
+
+  <!-- Section d’intro -->
+    <section class="section-header-outils">
+        <!-- Fil d’Ariane flottant -->
+        <nav class="breadcrumb-floating-outils">
+            <a href="index.html">Accueil</a>
+            <span>›</span>
+            <span>Outils</span>
+        </nav>
+        <div class="intro-outils">
+        <h1>Les outils incontournables du design UX/UI</h1>
+        <p>
+            Découvre une sélection d’outils utilisés par les designers UX/UI pour prototyper,
+            tester, organiser et collaborer efficacement.<br />
+            Que tu sois débutante ou plus expérimentée, explore les solutions les mieux
+            adaptées à tes projets, avec des retours d’usage, des tutoriels et des ressources complémentaires.
+        </p>
+        </div>
+    </section>
+  
+  <!-- Barre de filtres -->
+  <div class="resource-filters">
+    <select><option>Type d’outil</option></select>
+    <select><option>Licences</option></select>
+    <select><option>Niveau</option></select>
+    <div class="search-bar-filter">
+      <input type="text" placeholder="Rechercher un outil" />
+      <span class="search-icon"><i class="fas fa-search"></i></span>
+    </div>
+    <a href="#" class="reset-link">Réinitialiser</a>
+  </div>
+
+  <!-- Sélecteur affichage + tri -->
+  <div class="ressources-header">
+    <select class="result-count">
+        <option>3 résultats affichés sur 53</option>
+        <option>10 résultats affichés sur 53</option>
+        <option>25 résultats affichés sur 53</option>
+    </select>
+    <button class="tri-icon"><i class="fas fa-sort"></i></button>
+  </div>
+
+  <!-- Section cartes outils -->
+  <div class="ressources-list">
+
+    <!-- Colonne gauche -->
+    <div class="left-column">
+  
+      <!-- Figma -->
+      <div class="outil-card">
+        <div class="outil-label">Freemium</div>
+        <div class="outil-header">
+          <img src="images/figma.png" alt="Figma" class="outil-logo">
+          <div class="outil-info">
+            <h3>Figma</h3>
+            <div class="outil-tags">
+              <span><i class="fas fa-desktop"></i> Prototypage interactif</span>
+              <span><i class="fas fa-globe"></i> Tous niveaux</span>
+            </div>
+            <p>Outil en ligne pour créer des maquettes interactives, seul·e ou en équipe. Léa peut l’utiliser dès ses premiers projets.</p>
+          </div>
+        </div>
+        <div class="outil-buttons">
+          <button class="btn-outline">Découvrir <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-outline">Voir le tuto <i class="fas fa-video"></i></button>
+          <button class="btn-blue add-tool-btn">Ajouter à mes outils <i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+  
+      <!-- Maze -->
+      <div class="outil-card">
+        <div class="outil-label">Gratuit jusqu’à 1 projet</div>
+        <div class="outil-header">
+          <img src="images/maze.png" alt="Maze" class="outil-logo">
+          <div class="outil-info">
+            <h3>Maze</h3>
+            <div class="outil-tags">
+              <span><i class="fas fa-vial"></i> Tests utilisateurs</span>
+              <span><i class="fas fa-signal"></i> Intermédiaire</span>
+            </div>
+            <p>Réalise des tests à distance pour valider tes prototypes.</p>
+          </div>
+        </div>
+        <div class="outil-buttons">
+          <button class="btn-outline">Découvrir <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-blue">Faire un test <i class="fas fa-flask"></i></button>
+        </div>
+      </div>
+  
+      <!-- Notion -->
+      <div class="outil-card">
+        <div class="outil-label">Gratuit pour les étudiants</div>
+        <div class="outil-header">
+          <img src="images/notion.png" alt="Notion" class="outil-logo">
+          <div class="outil-info">
+            <h3>Notion</h3>
+                <div class="outil-tags">
+                <span><i class="fas fa-project-diagram"></i> Organisation de projet</span>
+                <span><i class="fas fa-globe"></i> Tous niveaux</span>
+                </div>
+                <p>Planifie tes wireframes, personas, et user journeys.</p>
+          </div>
+        </div>
+        <div class="outil-buttons">
+          <button class="btn-outline">Accéder au Template <i class="fas fa-arrow-right"></i></button>
+          <button class="btn-blue add-tool-btn">Ajouter à mes outils <i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Colonne droite -->
+    <div class="right-column">
+  
+      <!-- Adobe XD -->
+      <div class="outil-card">
+        <div class="outil-label">Freemium</div>
+        <div class="outil-header">
+          <img src="images/adobexd.png" alt="Adobe XD" class="outil-logor">
+          <div class="outil-info">
+            <h3>Adobe XD</h3>
+            <div class="outil-tags">
+              <span><i class="fas fa-pencil-ruler"></i> Prototypage & animation</span>
+              <span><i class="fas fa-signal"></i> Intermédiaire</span>
+            </div>
+            <p>Crée des maquettes animées interactives.</p>
+          </div>
+        </div>
+        <div class="outil-buttons">
+          <button class="btn-outline">Découvrir <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+  
+      <!-- Stark -->
+    <div class="outil-card">
+        <div class="outil-label">Gratuit / Pro</div>
+        <div class="outil-header">
+        <img src="images/stark.png" alt="Stark" class="outil-logor">
+        <div class="outil-info">
+            <h3>Stark</h3>
+            <div class="outil-tags">
+            <span><i class="fas fa-universal-access"></i> Accessibilité UI</span>
+            <span><i class="fas fa-globe"></i> Tous niveaux</span>
+            </div>
+            <p>Vérifie contraste & conformité WCAG.</p>
+        </div>
+        </div>
+        <div class="outil-buttons">
+        <button class="btn-outline">Tester <i class="fas fa-eye"></i></button>
+        </div>
+    </div>
+  
+  
+      <!-- Témoignage -->
+      <div class="outil-temoignage">
+        <div class="temoignage-header">
+          <img src="images/profiloutil.png" alt="Étudiant" class="temoignage-avatar">
+          <p><strong>Alain Le</strong>, Étudiant en Ico</p>
+        </div>
+        <blockquote>
+          Figma et Notion m’ont permis d’organiser tout mon projet de A à Z, sans me perdre dans des outils trop complexes.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Bloc conseils -->
+  <div class="conseil-comparatif">
+    <div class="conseil-image">
+      <img src="images/profilconseil.png" alt="Conseil utilisateur" />
+    </div>
+    <div class="conseil-text">
+      <p class="label">Nos conseils</p>
+      <p class="title">Comparer les outils selon leurs fonctionnalités, usages et prix.</p>
+    </div>
+    <button class="btn-blue">Accéder au comparatif <i class="fas fa-arrow-right"></i></button>
+  </div>
+
+  <!-- Boutons finaux -->
+  <div class="actions-finales">
+    <div class="actions-finales-buttons">
+      <button class="btn-blue">
+        <i class="fas fa-folder-open"></i> Accéder à ma boîte à outils
+      </button>
+      <button class="btn-outline with-icon">
+        <i class="fas fa-plus"></i> Suggérer un outil UX
+      </button>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/logoblanc.png" alt="IHM Hub" class="logo-footer" />
+    <div class="footer-links">
+      <div>
+        <h4>PLATEFORME</h4>
+        <ul>
+          <li>Comment ça marche</li>
+          <li>Tarifs & abonnements</li>
+          <li>Documentation</li>
+        </ul>
+      </div>
+      <div>
+        <h4>RESSOURCES</h4>
+        <ul>
+          <li>Comprendre l'UX Design</li>
+          <li>Méthodes recherche utilisateur</li>
+          <li>Bonnes pratiques en prototypage</li>
+          <li>Voir toutes les ressources</li>
+        </ul>
+      </div>
+      <div>
+        <h4>À PROPOS</h4>
+        <ul>
+          <li>Conditions générales</li>
+          <li>Politique de confidentialité</li>
+          <li>Accessibilité</li>
+          <li>Mentions légales</li>
+        </ul>
+        <div class="social-icons">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2024 IHM Hub</p>
+  </footer>
+
+ <!-- Popup Connexion Standard (header) -->
+<div id="header-login-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <h2>Connexion</h2>
+    <form id="header-login-form">
+      <input type="email" placeholder="Adresse mail" required />
+      <input type="password" placeholder="Mot de passe" required minlength="6" />
+      <p id="login-error-msg" class="form-error"></p>
+      <button type="submit" class="btn-blue">Me connecter</button>
+    </form>
+    <p class="alt-login">Pas encore de compte ? <a href="#" onclick="showRegisterPopup()">Créer un compte</a></p>
+  </div>
+</div>
+
+<!-- Popup Connexion (forcer la connexion) -->
+<div id="login-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="icon-lock">🔒</div>
+    <h2>Connecte-toi pour continuer</h2>
+    <p class="desc">Pour accéder à cette ressource, tu dois être connecté·e à ton espace IHM Hub.<br>Tu n'as pas encore de compte ? <a href="#" onclick="showRegisterPopup()">Crée-en un gratuitement</a></p>
+    <form id="login-form">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Mot de passe" required minlength="6">
+      <p id="login-popup-error-msg" class="form-error"></p>
+      <div class="forgot"><a href="#">Mot de passe oublié</a></div>
+      <button type="submit" class="btn-blue">Me connecter</button>
+    </form>
+  </div>
+</div>
+
+<!-- Popup Confirmation de connexion -->
+<div id="login-confirm-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="check-icon">✅</div>
+    <h2 id="login-confirm-title">Bienvenue</h2>
+    <p id="login-confirm-message">Tu es bien connecté·e.<br>Profite pleinement de l’expérience IHM Hub !</p>
+    <button class="btn-blue" onclick="closeAllPopups()">Continuer</button>
+  </div>
+</div>
+
+<!-- Popup Création de Compte -->
+<div id="register-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <h2>Créer un compte</h2>
+    <form id="register-form">
+      <input type="text" placeholder="Prénom" required>
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Adresse mail" required>
+      <input type="password" placeholder="Mot de passe" required minlength="6">
+      <input type="password" placeholder="Confirmer le mot de passe" required minlength="6">
+      <p id="register-error-msg" class="form-error"></p>
+      <button type="submit" class="btn-blue">Créer mon compte</button>
+    </form>
+    <p class="alt-login">Déjà inscrit ? <a href="#" onclick="showHeaderLoginPopup()">Se connecter</a></p>
+  </div>
+</div>
+
+<!-- Popup Confirmation d'inscription -->
+<div id="signup-confirm-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="check-icon">✅</div>
+    <h2 id="signup-confirm-title">Bienvenue</h2>
+    <p id="signup-confirm-message">Ton compte a été créé avec succès.<br>Bienvenue dans l'univers UX/UI.</p>
+    <button class="btn-blue" onclick="closeAllPopups()">Continuer</button>
+  </div>
+</div>
+  <script src="js/script.js"></script>
+</body>
+</html>

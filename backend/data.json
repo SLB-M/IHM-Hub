@@ -1,0 +1,69 @@
+{
+  "utilisateurs": [
+    {
+      "email": "m@s.fr",
+      "prenom": "m",
+      "password": "$2b$10$qY8nOawEAXc7F9vLCHtf7eW2NadT5qkCWtKGBWnQeEIzLyJXLjUaa"
+    },
+    {
+      "email": "m@ranou.fr",
+      "prenom": "Monique",
+      "password": "$2b$10$O4BkuD4GIRyCvAcApfQOPuMh2O2MdMvS1rCQzyLAVQO8QMfW6pgEy"
+    },
+    {
+      "email": "j.d@sfr.fr",
+      "prenom": "jeanette",
+      "password": "$2b$10$WVJF8yPUfIEvsAFfXZuDQeh8ekH.e1GQReOvwGgqwbXDCuBm60pKe"
+    },
+    {
+      "email": "chantal@latsu.fr",
+      "prenom": "Chantal",
+      "password": "$2b$10$EA2e8LLhvCmnxj3Y9opAfevJ3JhS6CaMIC4.417HWiQD8kWoB1Xbe"
+    },
+    {
+      "email": "p@p.fr",
+      "prenom": "Pierre",
+      "password": "$2b$10$dpViHHIxLYCiPnWB9QrIkeR59DY3pve7J3LGuRRdiT0Majy1xWjwa"
+    },
+    {
+      "email": "ms@free.fr",
+      "prenom": "Martine",
+      "password": "$2b$10$A8SUFdA10uwdJReizjJtQu4248gh05HTK8Sv0YTVuX7rX5/7n9nHy"
+    },
+    {
+      "email": "mmatin@live.fr",
+      "prenom": "Martin",
+      "password": "$2b$10$L0bGsTgKqP5A4sqcvdkaLOmxF7uHiADhaHRvQqrVxlkoPtG4uw4du"
+    },
+    {
+      "email": "pepa@pig.fr",
+      "prenom": "pepa",
+      "password": "$2b$10$DfJkIRMvYmtxy.AAzDcr4.dlirPmc8p33lmLXPjaMMPY3nEwkoQp."
+    },
+    {
+      "email": "lili@rose.fr",
+      "prenom": "lili",
+      "password": "$2b$10$0lvPiYU3vFwiBP5ZZjbHCOKSB6PhOfL8rz2JAwAsYLEjxoHU9eiDS"
+    },
+    {
+      "email": "t@y.fr",
+      "prenom": "tao",
+      "password": "$2b$10$oBTSs0U..zprYbjBKRppEOCoURqSyzCJe4f8qAw1DvZ.Rno5LA9KW"
+    },
+    {
+      "email": "m.salhab@hotmail.fr",
+      "prenom": "Marlène",
+      "password": "$2b$10$NRdcXNoNKEC8TIkFmvvbPuuCe57aHZl.l6opXiMRn5Sjuu2AWWMxq"
+    },
+    {
+      "email": "flo@flo.fr",
+      "prenom": "Florian",
+      "password": "$2b$10$IPMxzRDCYQGj90btJ.gJtOyMcpp5A6hVl.tCCLcci3Kwf6IwOZsXa"
+    },
+    {
+      "email": "tony@m.fr",
+      "prenom": "tony",
+      "password": "$2b$10$R8vee5rOmjAcCkYmCCIYg.8.M.DwIQoZcPbuvlvoAXqdXfKhCwMdu"
+    }
+  ]
+}

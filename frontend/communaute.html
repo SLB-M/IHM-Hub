@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IHM Hub | Communauté</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <img src="images/logoblanc.png" alt="IHM Hub" class="logo large" />
+      <nav>
+        <div class="dropdown">
+          <button id="theme-toggle" class="dropdown-toggle">
+            Thèmes <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="theme-menu" class="dropdown-menu">
+            <a href="#">Découverte de l’UX/UI</a>
+            <a href="#">Méthodes de recherche</a>
+            <a href="#">Prototypage & wireframes</a>
+            <a href="#">Tests utilisateurs</a>
+            <a href="#">Accessibilité</a>
+          </div>
+        </div>
+        <a href="outils.html">Outils UX/UI</a>
+        <a href="communaute.html#section-communaute">Communauté</a>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <div class="search-bar">
+        <input type="text" placeholder="Que veux tu apprendre ?">
+        <button><i class="fa fa-search"></i></button>
+      </div>
+      <!-- Boutons visiteur -->
+      <div id="guest-buttons" class="auth-buttons">
+        <button class="btn-connect" onclick="showHeaderLoginPopup()">Se connecter</button>
+        <button class="btn-register" onclick="showRegisterPopup()">S'inscrire</button>
+      </div>
+    
+     <!-- Affichage une fois connecté -->
+     <div id="header-user" class="header-user hidden">
+      <div id="profile-wrapper" class="profile-wrapper">
+        <div class="user-icon" id="profile-toggle">👤</div>
+        <div class="profile-dropdown hidden" id="profile-menu">
+          <div class="profile-name" id="dropdown-username">Prénom</div>
+          <ul>
+            <li><i class="fas fa-user"></i> Mon profil</li>
+            <li><i class="fas fa-chart-line"></i> Mon tableau de bord</li>
+            <li><i class="fas fa-tools"></i> Mes outils</li>
+            <li><i class="fas fa-book"></i> Mes ressources</li>
+            <li><i class="fas fa-calendar"></i> Mes événements</li>
+          </ul>
+          <div class="logout-btn" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Se déconnecter</div>
+        </div>
+      </div>
+    </div>   
+</header>
+
+  <!-- Section Héro -->
+  <section class="intro-communaute">
+    <!-- Fil d'Ariane -->
+    <nav class="breadcrumb-floating">
+      <a href="index.html">Accueil</a>
+      <span>›</span>
+      <span>Comunnauté</span>
+    </nav>
+    <div class="intro-text">
+      <h1>Rencontres & Inspirations : partage d'expériences entre passionnées d'UX</h1>
+      <p>Découvre des témoignages d'étudiantes, des parcours inspirants et des événements pour rencontrer d'autres passionnées d'IHM et de design UX.</p>
+      <p>Rejoins une communauté active où l'on échange, apprend et progresse ensemble.</p>
+    </div>
+  </section>
+  
+
+  <!-- Témoignages cartes -->
+  <section class="testimonials-section">
+    <h2>Témoignages étudiants</h2>
+    <div class="testimonial-cards">
+  
+      <!-- Léon -->
+      <div class="testimonial-card">
+        <img src="images/profil5.png" alt="Léon">
+        <h3>Léon, 21 ans</h3>
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Lyon</p>
+        <p class="formation"><i class="fas fa-graduation-cap"></i> Introduction à l'IHM</p>
+        <blockquote>
+          J’ai enfin compris les bases de l’IHM grâce aux vidéos et aux exercices interactifs. Ça m’a donné confiance pour créer mon tout premier prototype tout seul !
+        </blockquote>
+        <div class="stars">★ ★ ★ ★ ☆ <span>4.5/5</span></div>
+        <a href="#" class="cta-button">Voir son parcours</a>
+      </div>
+  
+      <!-- Yasmine -->
+      <div class="testimonial-card">
+        <img src="images/profil8.png" alt="Yasmine">
+        <h3>Yasmine, 24 ans</h3>
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Montpellier</p>
+        <p class="formation"><i class="fas fa-graduation-cap"></i> Tests utilisateurs</p>
+        <blockquote>
+          Les ressources proposées sont hyper pratiques. Grâce aux templates et aux retours d’expérience, j’ai réussi à mener un vrai test utilisateur dans mon projet d’étude.
+        </blockquote>
+        <div class="stars">★ ★ ★ ★ ★ <span>5/5</span></div>
+        <a href="#" class="cta-button">Voir son parcours</a>
+      </div>
+  
+      <!-- Louise -->
+      <div class="testimonial-card">
+        <img src="images/profil2 (5).png" alt="Louise">
+        <h3>Louise, 28 ans</h3>
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Lille</p>
+        <p class="formation"><i class="fas fa-graduation-cap"></i> Créer un prototype avec Figma</p>
+        <blockquote>
+          J’étais complètement débutante. En quelques semaines, j’ai pu présenter un prototype animé lors d’un hackathon. C’est hyper motivant.
+        </blockquote>
+        <div class="stars">★ ★ ★ ★ ☆ <span>4.5/5</span></div>
+        <a href="#" class="cta-button">Voir son parcours</a>
+      </div>     
+    </div>
+    <div class="testimonial-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div> 
+  </section>
+  
+<!-- success-stories-->
+  <section class="success-stories">
+    <h2>Ils ont concrétisé leur projet grâce à l’IHM Hub</h2>
+    
+    <div class="success-list">
+      <div class="success-item">
+        <i class="fas fa-user-circle"></i>
+        <span>Lucas a transformé son projet étudiant en portfolio</span>
+      </div>
+      <div class="success-item">
+        <i class="fas fa-user-circle"></i>
+        <span>Inès a décroché un stage après avoir partagé son prototype</span>
+      </div>
+      <div class="success-item">
+        <i class="fas fa-user-circle"></i>
+        <span>Théo est intervenu dans une conférence UX pour jeunes designers</span>
+      </div>
+    </div>
+  
+    <div class="btn-wrapper">
+      <a href="#" class="btn-secondary">Voir plus d’histoires inspirantes</a>
+    </div>
+  </section>
+  
+
+  <!-- Événements communauté UX -->
+  <section class="evenements-section">
+    <h2>Participe à des moments forts de la communauté UX</h2>
+    <div class="evenements-wrapper">
+      <table class="evenements-table">
+        <thead>
+          <tr>
+            <th>Evènement</th>
+            <th>Date</th>
+            <th>Lieu</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><i class="fas fa-microphone-alt"></i> Webinaire : Les clés du prototypage</td>
+            <td>16/06/2025</td>
+            <td>En ligne</td>
+            <td><button class="event-btn">S'inscrire</button></td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-handshake"></i> Rencontre IHM étudiants & pros</td>
+            <td>02/07/2025</td>
+            <td>Lille</td>
+            <td><button class="event-btn">Voir programme</button></td>
+          </tr>
+          <tr>
+            <td><i class="fas fa-lightbulb"></i> Hackathon UX Design 24h</td>
+            <td>05/09/2025</td>
+            <td>Paris</td>
+            <td><button class="event-btn">En savoir plus</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="event-dots">
+        <span></span><span class="active"></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Liens communauté -->
+  <section class="liens-communaute">
+    <h2>Tu veux échanger, poser des questions, partager un projet ?</h2>
+    <div class="liens-wrapper">
+      <a href="#" class="lien-card">
+        <img src="images/discord.png" alt="Discord">
+        <span>Rejoindre le Discord privé de la communauté UX</span>
+      </a>
+      <a href="#" class="lien-card">
+        <img src="images/forum.png" alt="Forum">
+        <span>Accéder au forum IHM Hub</span>
+      </a>
+      <a href="#" class="lien-card">
+        <img src="images/mail.png" alt="Mail">
+        <span>Recevoir les prochains événements par mail</span>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Footer  -->
+  <footer>
+    <img src="images/logoblanc.png" alt="IHM Hub" class="logo-footer">
+    <div class="footer-links">
+      <div>
+        <h4>PLATEFORME</h4>
+        <ul>
+          <li>Comment ça marche</li>
+          <li>Tarifs & abonnements</li>
+          <li>Documentation</li>
+        </ul>
+      </div>
+      <div>
+        <h4>RESSOURCES</h4>
+        <ul>
+          <li>Comprendre l'UX Design</li>
+          <li>Méthodes recherche utilisateur</li>
+          <li>Bonnes pratiques en prototypage</li>
+          <li>Voir toutes les ressources</li>
+        </ul>
+      </div>
+      <div>
+        <h4>À PROPOS</h4>
+        <ul>
+          <li>Conditions générales</li>
+          <li>Politique de confidentialité</li>
+          <li>Accessibilité</li>
+          <li>Mentions légales</li>
+        </ul>
+        <div class="social-icons">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2024 IHM Hub</p>
+  </footer>
+  <!-- Popup Connexion Standard (header) -->
+<div id="header-login-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <h2>Connexion</h2>
+    <form id="header-login-form">
+      <input type="email" placeholder="Adresse mail" required />
+      <input type="password" placeholder="Mot de passe" required minlength="6" />
+      <p id="login-error-msg" class="form-error"></p>
+      <button type="submit" class="btn-blue">Me connecter</button>
+    </form>
+    <p class="alt-login">Pas encore de compte ? <a href="#" onclick="showRegisterPopup()">Créer un compte</a></p>
+  </div>
+</div>
+
+<!-- Popup Connexion (forcer la connexion) -->
+<div id="login-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="icon-lock">🔒</div>
+    <h2>Connecte-toi pour continuer</h2>
+    <p class="desc">Pour accéder à cette ressource, tu dois être connecté·e à ton espace IHM Hub.<br>Tu n'as pas encore de compte ? <a href="#" onclick="showRegisterPopup()">Crée-en un gratuitement</a></p>
+    <form id="login-form">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Mot de passe" required minlength="6">
+      <p id="login-popup-error-msg" class="form-error"></p>
+      <div class="forgot"><a href="#">Mot de passe oublié</a></div>
+      <button type="submit" class="btn-blue">Me connecter</button>
+    </form>
+  </div>
+</div>
+
+<!-- Popup Confirmation de connexion -->
+<div id="login-confirm-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="check-icon">✅</div>
+    <h2 id="login-confirm-title">Bienvenue</h2>
+    <p id="login-confirm-message">Tu es bien connecté·e.<br>Profite pleinement de l’expérience IHM Hub !</p>
+    <button class="btn-blue" onclick="closeAllPopups()">Continuer</button>
+  </div>
+</div>
+
+<!-- Popup Création de Compte -->
+<div id="register-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <h2>Créer un compte</h2>
+    <form id="register-form">
+      <input type="text" placeholder="Prénom" required>
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Adresse mail" required>
+      <input type="password" placeholder="Mot de passe" required minlength="6">
+      <input type="password" placeholder="Confirmer le mot de passe" required minlength="6">
+      <p id="register-error-msg" class="form-error"></p>
+      <button type="submit" class="btn-blue">Créer mon compte</button>
+    </form>
+    <p class="alt-login">Déjà inscrit ? <a href="#" onclick="showHeaderLoginPopup()">Se connecter</a></p>
+  </div>
+</div>
+
+<!-- Popup Confirmation d'inscription -->
+<div id="signup-confirm-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="check-icon">✅</div>
+    <h2 id="signup-confirm-title">Bienvenue</h2>
+    <p id="signup-confirm-message">Ton compte a été créé avec succès.<br>Bienvenue dans l'univers UX/UI.</p>
+    <button class="btn-blue" onclick="closeAllPopups()">Continuer</button>
+  </div>
+</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

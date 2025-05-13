@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>IHM Hub | Accueil</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+          <img src="images/logoblanc.png" alt="IHM Hub" class="logo large" />
+          <nav>
+            <div class="dropdown">
+              <button id="theme-toggle" class="dropdown-toggle">
+                Thèmes <i class="fas fa-chevron-down"></i>
+              </button>
+              <div id="theme-menu" class="dropdown-menu">
+                <a href="#">Découverte de l’UX/UI</a>
+                <a href="#">Méthodes de recherche</a>
+                <a href="#">Prototypage & wireframes</a>
+                <a href="#">Tests utilisateurs</a>
+                <a href="#">Accessibilité</a>
+              </div>
+            </div>
+            <a href="outils.html">Outils UX/UI</a>
+            <a href="communaute.html#section-communaute">Communauté</a>
+          </nav>
+        </div>
+  
+    <div class="header-right">
+      <form class="search-bar">
+        <input type="text" placeholder="Que veux tu apprendre ?">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <!-- Boutons visiteur -->
+      <div id="guest-buttons" class="auth-buttons">
+        <button class="btn-connect" onclick="showHeaderLoginPopup()">Se connecter</button>
+        <button class="btn-register" onclick="showRegisterPopup()">S'inscrire</button>
+      </div>
+    
+     <!-- Affichage une fois connecté -->
+     <div id="header-user" class="header-user hidden">
+      <div id="profile-wrapper" class="profile-wrapper">
+        <div class="user-icon" id="profile-toggle">👤</div>
+        <div class="profile-dropdown hidden" id="profile-menu">
+          <div class="profile-name" id="dropdown-username">Prénom</div>
+          <ul>
+            <li><i class="fas fa-user"></i> Mon profil</li>
+            <li>
+              <a href="tableau-bord.html">
+                <i class="fas fa-chart-line"></i> Mon tableau de bord
+              </a>
+            </li>            <li><i class="fas fa-tools"></i> Mes outils</li>
+            <li><i class="fas fa-book"></i> Mes ressources</li>
+            <li><i class="fas fa-calendar"></i> Mes événements</li>
+          </ul>
+          <div class="logout-btn" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Se déconnecter</div>
+        </div>
+      </div>
+    </div>   
+</header>
+
+  <section class="mooc-page">
+
+    <!-- Fil d'Ariane -->
+    <nav class="breadcrumb-mc">
+      <a href="index.html">Accueil</a>
+      <span>›</span>
+      <a href="formations.html">Formations</a>
+      <span>›</span>
+      <span>Moocs et Cours en lignes</span>
+    </nav>
+  
+    <!-- Titre et description -->
+    <div class="mooc-header">
+      <h1>MOOCs et Cours en ligne</h1>
+      <p class="subtitle">
+        Avance à ton rythme avec une sélection de formations UX/IHM accessibles, classées par thème, niveau et durée.
+        Découvre ce qui t’inspire et trace ton parcours d’apprentissage.
+      </p>
+    </div>
+  
+    <!-- Filtres -->
+    <div class="filters-m">
+      <select name="niveau">
+        <option value="">Niveau</option>
+        <option value="debutant">Débutant</option>
+        <option value="intermediaire">Intermédiaire</option>
+        <option value="avance">Avancé</option>
+      </select>
+  
+      <select name="type">
+        <option value="">Type</option>
+        <option value="mooc">MOOC</option>
+        <option value="atelier">Atelier</option>
+        <option value="quiz">Quiz</option>
+      </select>
+  
+      <select name="theme">
+        <option value="">Thématique</option>
+        <option value="ihm">IHM</option>
+        <option value="ux">UX</option>
+        <option value="prototype">Prototypage</option>
+      </select>
+      <div class="search-bar-filter">
+        <input type="text" placeholder="Rechercher une formations...">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        </div>
+        <a href="#" class="reset-link">Réinitialiser</a>
+    </div>
+    </div>
+  
+    <!-- Timeline de progression -->
+    <div class="progress-steps-container">
+      <div class="progress-steps">
+        <div class="step done" data-step="1">1</div>
+        <div class="step current" data-step="2">2</div>
+        <div class="step" data-step="3">3</div>
+        <div class="step" data-step="4">4</div>
+      </div>
+      <div class="step-labels">
+        <span>Découverte UX & IHM</span>
+        <span>Design UI & accessibilité</span>
+        <span>Approfondir les méthodes UX</span>
+        <span>Prototypage & tests</span>
+      </div>
+    </div>    
+  
+    <!-- Section des cartes de cours -->
+    <div class="mooc-cards">
+
+      <!-- Carte 1 -->
+      <div class="mooc-card">
+        <span class="tag violet">Recommandé</span>
+        <img src="images/mooc1.png" alt="Illustration IHM">
+        <h3>Introduction à l’IHM</h3>
+        <p class="course-desc">Découvre les bases de l’interaction homme-machine et l’historique des IHM.</p>
+    
+        <ul class="course-info">
+          <li><i class="fas fa-clock"></i> 1h30</li>
+          <li><i class="fas fa-layer-group"></i> Débutant</li>
+          <li><i class="fas fa-star"></i> 4.7/5 <span class="platform">— OpenClassrooms</span></li>
+        </ul>
+    
+        <div class="card-actions">
+          <i class="far fa-heart"></i>
+          <a href="cours-detail.html" class="btn-secondary-m">Commencer</a>
+        </div>
+      </div>
+    
+      <!-- Carte 2 -->
+      <div class="mooc-card">
+        <span class="tag bleu">Populaire</span>
+        <img src="images/mooc2.png" alt="Illustration Design UI">
+        <h3>Design d’interfaces utilisateur</h3>
+        <p class="course-desc">Apprends à créer une interface claire, cohérente et intuitive.</p>
+    
+        <ul class="course-info">
+          <li><i class="fas fa-clock"></i> 1h45</li>
+          <li><i class="fas fa-layer-group"></i> Intermédiaire</li>
+          <li><i class="fas fa-star"></i> 4.5/5 <span class="platform">— Coursera</span></li>
+        </ul>
+    
+        <div class="card-actions">
+          <i class="far fa-heart"></i>
+          <a href="#" class="btn-secondary-m">Commencer</a>
+        </div>
+      </div>
+    
+      <!-- Carte 3 -->
+      <div class="mooc-card">
+        <span class="tag orange">Nouveau</span>
+        <img src="images/mooc3.png" alt="Illustration Prototypage Figma">
+        <h3>Créer un prototype interactif avec Figma</h3>
+        <p class="course-desc">Réalise ton premier prototype cliquable étape par étape.</p>
+    
+        <ul class="course-info">
+          <li><i class="fas fa-clock"></i> 2h00</li>
+          <li><i class="fas fa-layer-group"></i> Tous niveaux</li>
+          <li><i class="fas fa-star"></i> 4.8/5 <span class="platform">— YouTube/Figma</span></li>
+        </ul>
+    
+        <div class="card-actions">
+          <i class="far fa-heart"></i>
+          <a href="#" class="btn-secondary-m">Commencer</a>
+        </div>
+      </div>
+    <!-- Pagination sous les cartes -->
+    <div class="mooc-pagination">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    </div>
+    
+    <!-- Appel à l'action final -->
+  <div class="mooc-call-to-action">
+    <h3>Construis ton propre parcours UX dès maintenant</h3>
+    <a href="#" class="btn-primary">Voir toutes les formations disponibles</a>
+  </div>
+  
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/logoblanc.png" alt="IHM Hub" class="logo-footer">
+    <div class="footer-links">
+        <div>
+            <h4>PLATEFORME</h4>
+            <ul>
+                <li>Comment ça marche</li>
+                <li>Tarifs & abonnements</li>
+                <li>Documentation</li>
+            </ul>
+        </div>
+        <div>
+            <h4>RESSOURCES</h4>
+            <ul>
+                <li>Comprendre l'UX Design</li>
+                <li>Méthodes recherche utilisateur</li>
+                <li>Bonnes pratiques en prototypage</li>
+                <li>Voir toutes les ressources</li>
+            </ul>
+        </div>
+        <div>
+            <h4>À PROPOS</h4>
+            <ul>
+                <li>Conditions générales</li>
+                <li>Politique de confidentialité</li>
+                <li>Accessibilité</li>
+                <li>Mentions légales</li>
+            </ul>
+            <div class="social-icons">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">© 2024 IHM Hub</p>
+  </footer>
+<!-- Popup Connexion Standard (header) -->
+<div id="header-login-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <h2>Connexion</h2>
+    <form id="header-login-form">
+      <input type="email" placeholder="Adresse mail" required />
+      <input type="password" placeholder="Mot de passe" required minlength="6" />
+      <p id="login-error-msg" class="form-error"></p>
+      <button type="submit" class="btn-blue">Me connecter</button>
+    </form>
+    <p class="alt-login">Pas encore de compte ? <a href="#" onclick="showRegisterPopup()">Créer un compte</a></p>
+  </div>
+</div>
+
+<!-- Popup Connexion (forcer la connexion) -->
+<div id="login-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="icon-lock">🔒</div>
+    <h2>Connecte-toi pour continuer</h2>
+    <p class="desc">Pour accéder à cette ressource, tu dois être connecté·e à ton espace IHM Hub.<br>Tu n'as pas encore de compte ? <a href="#" onclick="showRegisterPopup()">Crée-en un gratuitement</a></p>
+    <form id="login-form">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Mot de passe" required minlength="6">
+      <p id="login-popup-error-msg" class="form-error"></p>
+      <div class="forgot"><a href="#">Mot de passe oublié</a></div>
+      <button type="submit" class="btn-blue">Me connecter</button>
+    </form>
+  </div>
+</div>
+
+<!-- Popup Confirmation de connexion -->
+<div id="login-confirm-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="check-icon">✅</div>
+    <h2 id="login-confirm-title">Bienvenue</h2>
+    <p id="login-confirm-message">Tu es bien connecté·e.<br>Profite pleinement de l’expérience IHM Hub !</p>
+    <button class="btn-blue" onclick="closeAllPopups()">Continuer</button>
+  </div>
+</div>
+
+<!-- Popup Création de Compte -->
+<div id="register-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <h2>Créer un compte</h2>
+    <form id="register-form">
+      <input type="text" placeholder="Prénom" required>
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Adresse mail" required>
+      <input type="password" placeholder="Mot de passe" required minlength="6">
+      <input type="password" placeholder="Confirmer le mot de passe" required minlength="6">
+      <p id="register-error-msg" class="form-error"></p>
+      <button type="submit" class="btn-blue">Créer mon compte</button>
+    </form>
+    <p class="alt-login">Déjà inscrit ? <a href="#" onclick="showHeaderLoginPopup()">Se connecter</a></p>
+  </div>
+</div>
+
+<!-- Popup Confirmation d'inscription -->
+<div id="signup-confirm-popup" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllPopups()">&times;</span>
+    <div class="check-icon">✅</div>
+    <h2 id="signup-confirm-title">Bienvenue</h2>
+    <p id="signup-confirm-message">Ton compte a été créé avec succès.<br>Bienvenue dans l'univers UX/UI.</p>
+    <button class="btn-blue" onclick="closeAllPopups()">Continuer</button>
+  </div>
+</div>
+  <script src="js/script.js"></script>
+</body>
+</html>
