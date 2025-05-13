@@ -3,7 +3,7 @@ const fs = require('fs');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const path = require('path'); // ✅ Ajouté
+const path = require('path'); // ✅ nécessaire pour les chemins
 
 const app = express();
 app.use(cors());
@@ -25,9 +25,9 @@ function ecrireDonnees(data) {
   fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
 }
 
-// === ROUTES BACKEND ===
+// === ROUTES API ===
 
-// ✅ Inscription
+// Inscription
 app.post('/inscription', async (req, res) => {
   const { email, prenom, password } = req.body;
   const donnees = lireDonnees();
@@ -47,7 +47,7 @@ app.post('/inscription', async (req, res) => {
   res.status(201).send({ message: "Inscription réussie !", token, prenom });
 });
 
-// ✅ Connexion
+// Connexion
 app.post('/connexion', async (req, res) => {
   const { email, password } = req.body;
   const donnees = lireDonnees();
@@ -62,15 +62,15 @@ app.post('/connexion', async (req, res) => {
   res.send({ message: "Connexion réussie !", token, prenom: utilisateur.prenom });
 });
 
-// ✅ SERVIR LE FRONTEND
+// === SERVIR LE FRONTEND (correspond à ta structure) ===
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-// ✅ Fallback (single page + refresh OK)
+// Rediriger toutes les routes inconnues vers index.html (SPA ou navigation directe)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
-// ✅ Lancer le serveur
+// === LANCER LE SERVEUR ===
 app.listen(port, () => {
   console.log(`✅ Serveur IHM Hub lancé sur http://localhost:${port}`);
 });
